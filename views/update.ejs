@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action=""method="post">
+        <input type="text" name="name" placeholder="masukkan nama kamu" value="<%= tier.name %>">
+        <input type="number" name="Height" placeholder="masukkan tinggi kamu" value="<%= tier.Height %>">
+        <input type="number" step=0.01 name="weight" placeholder="masukkan berat badan kamu" value="<%= tier.weight %>">
+        <input type="date" name="birthdate" value="<%= tier.birthdate %>">
+        <select type="" name="married" placeholder="have you married?" value="<%= tier.married %>">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+        <button type="submit"> Simpan </button>
+        <a href="/" class="btn">cancel</a>
+    </form>
+</body>
+</html>
