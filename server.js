@@ -23,12 +23,8 @@ app.get('/add', (req,res) =>{
 })
 
 app.post('/add',(req,res)=>{
-    quest.push({name : req.body.name, Height : req.body.Height, weight : req.body.weight, birthdate : req.body.birthdate, married : req.body.married});
+    quest.push({name : req.body.name, Height : req.body.Height, weight : req.body.weight, birthdate : req.body.birthdate, married : JSON.parse(req.body.married)});
     res.redirect('/')
-})
-
-app.get('/edit', (req,res) =>{
-    res.send('Hello World')
 })
 
 app.get('/delete/:index', (req, res) =>{
